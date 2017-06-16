@@ -3,3 +3,5 @@ For a specific user case I needed a way to prohibit post authors to comment on t
 
 
 'trash' can be replaced with '0' or 'spam'. '0' sets the comment status to "to be moderated", 'spam' goes to the spam folder.
+
+Tested on: WordPress version 4.8
