@@ -6,7 +6,7 @@ function prohibit_author_comment( $approved, $commentdata ) {
   $author_id = get_post_field( 'post_author', $post_id ); // Get the author ID. 
 
 	if( $commentdata['user_ID'] == $author_id ) {
-		return 'trash'; // skip everything, comment goes straight to trash.
+		return 'trash'; // skip everything, comment goes straight to trash or '0' or 'spam'.
 
 	}
 
