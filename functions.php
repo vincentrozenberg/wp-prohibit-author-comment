@@ -1,6 +1,6 @@
 <?php
 
-function prohibit_author_comment( $approved, $commentdata ) {
+function vr_prohibit_author_comment( $approved, $commentdata ) {
 
   $post_id = $commentdata['comment_post_ID']; // get the post ID.
   $author_id = get_post_field( 'post_author', $post_id ); // Get the author ID. 
@@ -13,6 +13,6 @@ function prohibit_author_comment( $approved, $commentdata ) {
 	return $approved; // This is the approval status set on WP Dashboard.
 }
 
-add_filter( 'pre_comment_approved' , 'prohibit_author_comment' , '99', 2 );
+add_filter( 'pre_comment_approved' , 'vr_prohibit_author_comment' , '99', 2 );
 
 ?>
